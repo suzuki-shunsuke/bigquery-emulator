@@ -6,6 +6,7 @@ on:
   pull_request:
 jobs:
   build:
+    timeout-minutes: 30
     name: Build
     strategy:
       matrix:
@@ -58,6 +59,7 @@ jobs:
       run: |
         ldd bigquery-emulator || true
   test:
+    timeout-minutes: 30
     needs: build
     name: Test
     strategy:
