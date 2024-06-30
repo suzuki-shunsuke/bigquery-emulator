@@ -5,6 +5,7 @@ on:
       - v*
 jobs:
   publish:
+    timeout-minutes: 30
     name: Publish for ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
